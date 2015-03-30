@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Rails OnlineShop: development" uuid="ed5f825d-69d4-4fc2-a8c7-0a48f375d40a">
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <schema-pattern>onlineshop_development.pg_catalog onlineshop_development.public</schema-pattern>
+      <default-schemas>onlineshop_development.pg_catalog onlineshop_development.public</default-schemas>
+    </data-source>
+    <data-source name="Rails OnlineShop: test" uuid="9b01b3ad-e3e3-44b5-9cf0-429d102000cd">
+      <user-name>postgres</user-name>
+      <user-password>df9adf98df99df9adf98df99</user-password>
+      <schema-pattern>onlineshop_test.pg_catalog onlineshop_test.public</schema-pattern>
+      <default-schemas>onlineshop_test.pg_catalog onlineshop_test.public</default-schemas>
+    </data-source>
+    <data-source name="Rails OnlineShop: production" uuid="ddd69567-d96e-4fa5-9e79-460f730ab3cb">
+      <user-name>postgres</user-name>
+      <user-password>df9adf98df99df9adf98df99</user-password>
+      <schema-pattern>onlineshop_production.pg_catalog onlineshop_production.public</schema-pattern>
+      <default-schemas>onlineshop_production.pg_catalog onlineshop_production.public</default-schemas>
+    </data-source>
+  </component>
+</project>
