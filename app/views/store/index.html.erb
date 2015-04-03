@@ -1,6 +1,8 @@
 <<% if notice %>
     <p id="notice"><%= notice %></p>
 <% end %>
+
+<%= @shown_message %>
 <h1>Your Pragmatic Catalog</h1>
 <% cache ['store', Product.latest] do %>
     <% @products.each do |product| %>
@@ -19,5 +21,6 @@
         <% end %>
     <% end %>
 <% end %>
+
 
 
