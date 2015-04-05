@@ -63,7 +63,8 @@ class LineItemsController < ApplicationController
 
     @line_item.destroy
     respond_to do |format|
-      format.html { redirect_to store_url, notice: 'Product was deleted from your cart.' }
+      format.html { redirect_to store_url}
+      format.js {@current_item = @line_item}
       format.json { head :no_content }
     end
   end
