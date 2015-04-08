@@ -26,6 +26,7 @@ class LineItemsController < ApplicationController
   # POST /line_items
   # POST /line_items.json
   def create
+    #@cart = current_cart
     product = Product.find(params[:product_id])
     @line_item = @cart.add_product(product.id)
 
@@ -61,7 +62,7 @@ class LineItemsController < ApplicationController
   # DELETE /line_items/1.json
   def destroy
     product = Product.find(params[:product_id])
-    @line_item = @cart.del_product(product.id)
+    @line_item = @line_item.decrement_quantity(@line_item.id)
     respond_to do |format|
       format.html { redirect_to store_url}
       format.js {@current_item = @line_item}
@@ -72,14 +73,14 @@ class LineItemsController < ApplicationController
   # PUT /line_items/1
   # PUT /line_items/1.json
   def decrement
-    @cart = @current_cart
+    #@cart = current_cart
 
     # 1st way: decrement through method in @cart
-    @line_item = @cart.decrement_line_item_quantity(params[:id]) # passing in line_item.id
+    #@line_item = @cart.decrement_line_item_quantity(params[:id]) # passing in line_item.id
 
     # 2nd way: decrement through method in @line_item
-    #@line_item = @cart.line_items.find_by_id(params[:id])
-    #@line_item = @line_item.decrement_quantity(@line_item.id)
+    @line_item = @cart.line_items.find_by_id(params[:id])
+    @line_item = @line_item.decrement_quantity(@line_item.id)
 
     respond_to do |format|
       if @line_item.save

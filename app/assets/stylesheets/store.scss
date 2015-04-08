@@ -10,10 +10,10 @@
     border-bottom: 3px dotted
   }
 .entry {
-    overflow: auto;
-    margin-top: 1em;
-    border-bottom: 1px dotted;
-    min-height: 100px;
+  overflow: auto;
+  margin-top: 1em;
+  border-bottom: 1px dotted;
+  min-height: 100px;
   img {
     width: 80px;
     margin-right: 5px;
@@ -42,5 +42,9 @@
     font-weight: bold;
     margin-right: 3em;
   }
-}
+
+  .myButton {
+    margin-left: 100px;
+    }
+  }
 }
