@@ -1,0 +1,8 @@
+<h3>Order from OnlineShop has been sent</h3>
+<p>
+  This message informs you that your order has been sent::
+</p>
+<table>
+  <tr><th colspan="2">Q-ty</th><th>Description</th></tr>
+  <%= render @order.line_items -%>
+</table>
