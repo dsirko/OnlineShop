@@ -9,7 +9,7 @@ class OrderNotifier < ApplicationMailer
   def received(order)
     @order = order
 
-    mail to: order.email, subject: '????????????? ?????? ? OnlineStore'
+    mail to: order.email, subject: '????? ??????? ? OnlineStore'
   end
 
   # Subject can be set in your I18n file at config/locales/en.yml
@@ -17,7 +17,7 @@ class OrderNotifier < ApplicationMailer
   #
   #   en.order_notifier.shipped.subject
   #
-  def shipped
+  def shipped (order)
     @order = order
 
     mail to: order.email, subject: 'Order from OnlineStore has been sent'

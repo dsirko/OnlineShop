@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
 
   get 'admin' => 'admin#index'
-  controller :session do
+
+  controller :sessions do
     get 'login' => :new
     post 'login' => :create
     delete 'logout' => :destroy
@@ -17,7 +18,7 @@ Rails.application.routes.draw do
   resources :orders
 
   resources :products do
-    get :who_boutht, on: :member
+    get :who_bought, on: :member
   end
 
 
