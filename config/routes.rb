@@ -13,23 +13,28 @@ Rails.application.routes.draw do
 
   resources :users
 
-  #resources :line_items
-  resources :carts
-  resources :orders
+  scope '(:locale)' do
+    root to: 'store#index', as: 'store', via: :all
+    #resources :line_items
+    resources :carts
+    resources :orders
+    resources :line_items do
+      put 'decrement', on: :member
+    end
+  end
+
 
   resources :products do
     get :who_bought, on: :member
   end
 
 
-  resources :line_items do
-    put 'decrement', on: :member
-  end
+
 
 
   get 'store/index'
 
-  root to: 'store#index', as: 'store'
+
 
 
 
